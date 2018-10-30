@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Groundhog</title>
+    <description>a Grasshopper plugin and wiki exploring the applications of computational design in landscape architecture.</description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" /><lastBuildDate>Sat, 14 Oct 2017 00:00:00 +0000</lastBuildDate><item>
+        <title>Flows (documentation)</title><description>Components for creating simple projections and analysis of surface water flows.</description><pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
+        <link>/documentation/flows/</link>
+        <guid isPermaLink="true">/documentation/flows/</guid>
+      </item><item>
+        <title>Plants (documentation)</title><description>Components that enable the parametric control of plant selection, distribution, performance, and visualisation.</description><pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+        <link>/documentation/plants/</link>
+        <guid isPermaLink="true">/documentation/plants/</guid>
+      </item><item>
+        <title>Terrain (documentation)</title><description>Components for quantifying different elements of topographic form.</description><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+        <link>/documentation/terrain/</link>
+        <guid isPermaLink="true">/documentation/terrain/</guid>
+      </item><item>
+        <title>Channels (documentation)</title><description>Components for deriving and analysing water flows within a sectional profile.</description><pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+        <link>/documentation/channels/</link>
+        <guid isPermaLink="true">/documentation/channels/</guid>
+      </item><item>
+        <title>Paths (documentation)</title><description>Components for ...</description><pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+        <link>/documentation/paths/</link>
+        <guid isPermaLink="true">/documentation/paths/</guid>
+      </item><item>
+        <title>Analogue Computation (techniques)</title><description>A different approach to biomimicry — using digital and analogue methods to better understand natural phenomena.</description><pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
+        <link>/techniques/analogue-computation/</link>
+        <guid isPermaLink="true">/techniques/analogue-computation/</guid>
+      </item><item>
+        <title>Field Conditions (techniques)</title><description>'The complexity of the given' as a compositional strategy in mapping and design.</description><pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+        <link>/techniques/field-conditions/</link>
+        <guid isPermaLink="true">/techniques/field-conditions/</guid>
+      </item><item>
+        <title>Keio University Roof Garden (projects)</title><description>A contemporary rooftop garden that uses a tiled field to recreate natural planting patterns.</description><pubDate>Thu, 14 Sep 2017 00:00:00 +0000</pubDate>
+        <link>/projects/keio-university-roof-garden/</link>
+        <guid isPermaLink="true">/projects/keio-university-roof-garden/</guid>
+      </item><item>
+        <title>MAX IV Laboratory Landscape (projects)</title><description>A defensive topography that that creates an intricate series of rolling mounds to dampen vibrations from a nearby highway.</description><pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+        <link>/projects/max-iv-laboratory/</link>
+        <guid isPermaLink="true">/projects/max-iv-laboratory/</guid>
+      </item><item>
+        <title>Botanic Gardens of Barcelona (projects)</title><description>Facets form a mosaic that stretches across a steep slope and structures a tailored planting plan.</description><pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
+        <link>/projects/botanical-gardens-of-barcelona/</link>
+        <guid isPermaLink="true">/projects/botanical-gardens-of-barcelona/</guid>
+      </item></channel>
+</rss>

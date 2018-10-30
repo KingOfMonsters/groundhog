@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Groundhog - Plants</title>
+    <meta name="description" content="Components that enable the parametric control of plant selection, distribution, performance, and visualisation.">
+
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="/groundhog/assets/main.css">
+
+    <link rel="canonical" href="/groundhog/documentation/plants/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/groundhog/sitemap.xml" />
+    <meta name="robots" content="noindex"><!-- Block google indexing from Jekyll staging copy-->
+    
+    <script>
+    document.createElement( "picture" ); // Picture element HTML5 shiv
+    </script>
+
+  </head>
+
+  <body>
+
+    
+
+    
+  <nav class="navbar no-print" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-brand">
+
+      <a class="navbar-item" href="/groundhog">
+        <img src="/groundhog/assets/logo.svg" alt="Groundhog" id="logo">
+        Groundhog
+      </a>
+
+      <button class="button navbar-burger" data-target="navMenuDocumentation">
+        <span></span><span></span><span></span>
+      </button>
+
+  </div>
+
+    <div class="navbar-menu" id="navMenuDocumentation" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-start">
+
+        <a class="navbar-item gh-plugin-text " href="/groundhog/plugin/">
+          <i data-feather="package"></i> Plugin
+        </a>
+        <a class="navbar-item gh-documentation-text active" href="/groundhog/documentation/">
+          <i data-feather="book"></i> Docs
+        </a>
+        <a class="navbar-item gh-techniques-text " href="/groundhog/techniques/">
+          <i data-feather="briefcase"></i> Techniques
+        </a>
+        <a class="navbar-item gh-projects-text " href="/groundhog/projects/">
+          <i data-feather="aperture"></i> Projects
+        </a>
+        <a class="navbar-item gh-about-text " href="/groundhog/about/">
+          <i data-feather="help-circle"></i> About
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <a class="navbar-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+          <i class="is-light" data-feather="github"></i> Github
+        </a>
+        <a class="navbar-item" href="http://eepurl.com/c-0nNL" target="_blank">
+          <i data-feather="mail"></i> Newsletter
+        </a>
+        <!--
+        <a class="navbar-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+          <i class="is-light" data-feather="facebook"></i> <span class="is-hidden-desktop">Facebook</span>
+        </a>
+        <a class="navbar-item" href="https://twitter.com/groundhog_la" target="_blank">
+          <i class="is-light" data-feather="twitter"></i> <span class="is-hidden-desktop">Twitter</span>
+        </a>
+        -->
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+    <main class="content gh-documentation-content is-fluid footer-pushdown" aria-label="Content">
+      <section class="hero gh-documentation">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1">
+        Plants
+      </h1>
+      <div class="level">
+        <div class="level-left">
+          
+          
+          
+        </div>
+      </div>
+      <h2 class="subtitle">
+        Components that enable the parametric control of plant selection, distribution, performance, and visualisation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    
+      
+
+<article class="message is-success no-print">
+  <div class="message-body">
+
+    <div class="columns">
+
+      <div class="column is-narrow gh-message-icon">
+        <i data-feather="download"></i>
+      </div>
+
+      <div class="column">
+        The associated model and definition that demonstrating the use of these components <a href="/groundhog/downloads/documentation/plants.zip">can be downloaded here</a>. You will need to have installed the <a href="/groundhog/plugin/">Groundhog plugin</a> for the definition to work properly.
+      </div>
+
+    </div>
+
+  </div>
+</article>
+
+    
+
+    <p>If considered just in terms of their CAD representation, planting design appears to be an exercise in arranging circles. Some circles are smaller or larger, brighter or duller; more round or more frayed. But, removing the metadata that are the sprites, colours, and labels, we start and end with a representation of a particular species' dimensions at maturity: a disc.</p>
+<p>It is regrettable that in both digital and analogue mediums the typical representations used poorly reflect their subject matter. Depictions of vegetation are rarely spatially explicit, and often rely on fixed and idealised averages that do not reflect the general nature, or the actual reality, of specific species.<span class="citation" data-cites="Elkin:2017"><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></span><span class="citation" data-cites="Raxworthy:2013"><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></span> A plan, once planted, will reach the 'mature' state it depicts after years if not decades. This mature state itself is itself an abstraction, as each plant's dimensions vary according to the localised condition that propel or constrain individual growth and are typically altered through ongoing maintenance regimes.</p>
+<figure class="gh-figure">
+  
+<a href="/groundhog/assets/plants/1-28d211a1d1288743b07bc54ea3d03760c0b7e6b89022ef2927c4b0f1b0a29e4c.jpg" target="_blank"> <img
+      srcset="/groundhog/assets/34800c-4413169bd1966293419daf29b1493ce9d2bf85bc8390ccf701ef45c3a3fd43fe.jpg 1080w,
+              /groundhog/assets/b65c03-7219e2bba94a2b20a458de72b5ab7913c33370d24bfef74c530d8390c133937d.jpg 1600w,
+              /groundhog/assets/ef914f-2b949c81b7d1ed9bdc9171309265919805e9f4e44735bdace98a6bae0df032de.jpg 2686w,"
+      sizes="(max-width: 768px) 100vw,
+             (max-width: 1024px) 96vw,
+             (max-width: 1408px) 92vw,
+             2600w"
+      src="/groundhog/assets/b65c03-7219e2bba94a2b20a458de72b5ab7913c33370d24bfef74c530d8390c133937d.jpg"
+      alt="Parametric methods of planting design can manage vast quantities of individual species distributed across a site and evaluate how they change over time." width="100%"
+    > </a>
+<figcaption>
+    <p>
+Parametric methods of planting design can manage vast quantities of individual species distributed across a site and evaluate how they change over time.
+</p>
+    
+<em>Philip Belesky, for http://groundhog.la</em>
+</figcaption></figure>
+
+
+<p>While many options exist for visualising planting plans with a high degree of fidelity (presuming the correct models for a given species are available) these are typically deployed after the concept design stage, given that they are difficult to implement and modify. As a result they are often ill-suited to design exploration, but useful for evaluating aesthetics.</p>
+<p>However the lack of 'accurate' models restricts those earlier stages of the design process, if working in orthographic projections, to the most abstracted versions of a planting plan. This constricts the design potential for vegetated elements in a design, both in terms of their broad visual character, but also in terms of any performance metrics available. Particularly important is the nature of plants as one of the most clearly-evolving elements of a landscape, where growth heavily effects the aesthetics of a space, and so must be planned across different time periods if the space is to be successful before each plant reaches maturity.</p>
+<p>Several components in the Groundhog plugin work in conjunction to explore how some aspects of planting design can be eased, or approached differently, using parametric methods. To do so, it augments traditional forms of representations (points and circles) with metadata that describes that spatial and performance characteristics of a particular species. These attributes can then be used to inform both the locations of the plants in an automated manner, or be used as analytic tools for better understand how a given plant distribution performs according to specific criteria or over a particular time period.</p>
+<p>Its primary input in establishing species attributes is as a spreadsheet; namely namely a CSV file with tables of information that are then read-in to Grasshopper. It contains a number of 'core' and optional parameters for each species that are needed to (later) produce a minimum-viable depiction of species typical geometry. These values (and example species) are available in the <code>Groundhog - Plants Examples.csv</code> file within the demo files attached to this post. This spreadsheet also provides option for extensibility, where arbitrary values can be added according to particular design intents, such as a value representing phytoremediation potential, or wind breaking potential, etc.</p>
+<div class="card gh-component">
+<div class="card-content">
+<div class="level is-mobile">
+<div class="level-left">
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+<h3 class="title is-4">
+Species Importer
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+PImport
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Flora
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_pimport.png" alt="Icon for the PImport component">
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>
+<em>Create plant attributes from an imported spreadsheet</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+CSV File
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+The contents of a CSV file (use the output of a Read File component
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>GenericParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Plants
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+The resulting plant objects
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>GenericParam</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<p>A second component contains predefined values for generic forms of vegetation, such as 'grass' or 'shrub' that enable rapid design prototyping without the need to specify detailed planting characteristics. Similarly, a component is provided for constructing one-off species representations in Grasshopper using explicit parameters, such as for defining canopy radii.</p>
+<div class="card gh-component">
+<div class="card-content">
+<div class="level is-mobile">
+<div class="level-left">
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+<h3 class="title is-4">
+Generic Species
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+PGeneric
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Flora
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_pgeneric.png" alt="Icon for the PGeneric component">
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>
+<em>Output plant objects from pre-define generic types </em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Shrub
+</td>
+<td>
+<code>S</code>
+</td>
+<td>
+Generic Shrub (placeholder data)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>GenericParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Grass
+</td>
+<td>
+<code>G</code>
+</td>
+<td>
+Generic Grass (placeholder data)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>GenericParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Tree
+</td>
+<td>
+<code>T</code>
+</td>
+<td>
+Generic Tree (placeholder data)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>GenericParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<p>Regardless of which component is used the result is a simple textual representation of the species list, where characteristics use a simple <code>key:value</code> format. This allows the list of species to interact with standard list management tools in Grasshopper for adding/removing/combining species depending on a given logic.</p>
+<p>The next step is related to how plants are distributed across space. This process can proceed using a number of different methods, given the varying relationships between spatial condition and species attributes that drive different patterns of distribution. At its most simple, the distributor can take a given series of spatial points, developed in Rhinoceros or in Grasshopper, where pre-existing tools allow for common patterns such as grid or radial patterns, as well as more complex options, such as where planter elements are defined elsewhere in the design and planting locations depend directly on these geometries.</p>
+<p>Once a location (in the form of a <code>Point</code>) has been generated for each instance of a species (in the form of the list) these can be fed into the <code>Appearance</code> component. This then allows for key geometric features of each individual plant to be projected at a particular point in time. At present these visualisation methods are limited to basic circular depictions for criteria such as heights or trunks, root, and canopy radii. While offered as flat linework, many existing grasshopper tools can be used to give them volume but filling in interior values, such as when returning canopy circles into spheres can be used to test shading or trunk circles into cylinders to check visual occlusion.</p>
+<div class="card gh-component">
+<div class="card-content">
+
+
+<div class="level is-mobile">
+
+<div class="level-left">
+
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium"><h3 class="title is-4">
+Plant Appearance
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Shower
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Flora
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_pshower.png" alt="Icon for the Shower component">
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>
+<em>Simulate the appearance of a particular plant instance</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Plants
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+The plant attributes to simulate
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>GenericParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Locations
+</td>
+<td>
+<code>L</code>
+</td>
+<td>
+The locations to assign to each attribute
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Times
+</td>
+<td>
+<code>T</code>
+</td>
+<td>
+The time (in years) since initial planting to display
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Visualisations
+</td>
+<td>
+<code>V</code>
+</td>
+<td>
+Whether to show a full L-system visualisation (true) or just the base geoemtries (false)
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>BooleanParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Trunk
+</td>
+<td>
+<code>T</code>
+</td>
+<td>
+Trunk radius
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CircleParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Root
+</td>
+<td>
+<code>R</code>
+</td>
+<td>
+Root radius
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CircleParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Crown
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+Crown radius
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CircleParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Spacing
+</td>
+<td>
+<code>S</code>
+</td>
+<td>
+Spacing radius
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CircleParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Color
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+The species color of each plant
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>ColourParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Label
+</td>
+<td>
+<code>T</code>
+</td>
+<td>
+The species label of each plant
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>TextParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<p>While the components are relatively simple here in their calculations (especially given the currently-released set of components available) their value is in enabling quantitative criteria to be more easily used in designing and assessing vegetation distributions. The tripartite attribute/placement/simulation stages have emerged from extensive iteration in testing how to best support planting design workflows by best allowing each task to easily interface with the existing methods of generation and analysis available in Grasshopper.</p>
+<figure class="gh-figure">
+  
+<a href="/groundhog/assets/plants/definition-adf8759d0e209de0e1608187717987eaa68e72f315edbfa6b13c9b00ef4c0653.jpg" target="_blank"> <img
+      srcset="/groundhog/assets/5ba1b4-250a1dd5c9f51f46c727a8bcb1b5fcce1328481f30f4c606e5ded07b0c1eed30.jpg 1080w,
+              /groundhog/assets/e0da8a-641edf5cef923f573f866e3861204571376d56154bcfabd7404103b648ce684f.jpg 1600w,
+              /groundhog/assets/961f98-d0b1355c443ba836e34be2099d9a222ca7c5292c64b48aa35ce25d8f4c3c6276.jpg 2686w,"
+      sizes="(max-width: 768px) 100vw,
+             (max-width: 1024px) 96vw,
+             (max-width: 1408px) 92vw,
+             2600w"
+      src="/groundhog/assets/e0da8a-641edf5cef923f573f866e3861204571376d56154bcfabd7404103b648ce684f.jpg"
+      alt="Grasshopper definition demonstrating how to select particular species, place them, and simulate basic growth characteristics." width="100%"
+    > </a>
+<figcaption>
+    <p>
+Grasshopper definition demonstrating how to select particular species, place them, and simulate basic growth characteristics.
+</p>
+    
+<em>Philip Belesky, for http://groundhog.la</em>
+</figcaption></figure>
+
+
+<blockquote>
+<p><em><strong>Coming Soon</strong>: further components that allow for more naturalistic or performance-based planting distribution and 3D visualisation methods.</em></p>
+</blockquote>
+<div class="references">
+
+</div>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Rosetta S Elkin, “Live Matter: Towards a Theory of Plant Life,” <em>Journal of Landscape Architecture</em> 12, no. 2 (2017): 60–61.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Julian Raxworthy, “Novelty in the Entropic Landscape” (The University of Queensland, 2013), 113.<a href="#fnref2">↩</a></p></li>
+</ol>
+</section>
+
+
+  </div>
+</section>
+
+<!--
+<section class="section">
+  <div class="container">
+
+    
+      <h4>Related Techniques</h4>
+      
+        
+      
+        
+      
+    
+
+    
+
+    
+      <h4>Related Projects</h4>
+      
+        
+      
+        
+      
+        
+      
+    
+
+  </div>
+</section>
+ -->
+    </main>
+
+    <footer class="footer no-print">
+  <div class="container content gh-documentation-content has-text-centered">
+
+    <nav class="level">
+      <a class="level-item" href="/groundhog/about/">
+        <i data-feather="help-circle"></i> About
+      </a>
+      <a class="level-item" href="/groundhog/plugin/">
+        <i data-feather="package"></i> Plugin
+      </a>
+      <a class="level-item" href="/groundhog/documentation/">
+        <i data-feather="book"></i> Docs
+      </a>
+      <a class="level-item" href="/groundhog/techniques/">
+        <i data-feather="briefcase"></i> Techniques
+      </a>
+      <a class="level-item" href="/groundhog/projects/">
+        <i data-feather="aperture"></i> Projects
+      </a>
+      <a class="level-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+        <i data-feather="github"></i> Github
+      </a>
+      <!--
+      <a class="level-item" href="" target="_blank">
+        <i data-feather="download-cloud"></i> Food4Rhino
+      </a>
+      -->
+      <a class="level-item" href="http://eepurl.com/c-0nNL" target="_blank">
+        <i data-feather="mail"></i> Newsletter
+      </a>
+      <!--
+      <a class="level-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+        <i data-feather="facebook"></i> Facebook
+      </a>
+      <a class="level-item" href="https://twitter.com/groundhog_la" target="_blank">
+        <i data-feather="twitter"></i> Twitter
+      </a>
+      -->
+    </nav>
+
+    <p class="">
+      <em>The Groundhog plugin and website are © 2018 under the terms of the <a href="https://opensource.org/licenses/GPL-3.0">GPL v3 License</a>. By <a href="http://philipbelesky.com/" target="_blank">Philip Belesky</a>.</em>
+    </p>
+
+  </div>
+</footer>
+
+  </body>
+
+  <script src="/groundhog/assets/main.js"></script>
+
+</html>

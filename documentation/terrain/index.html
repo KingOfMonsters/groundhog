@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Groundhog - Terrain</title>
+    <meta name="description" content="Components for quantifying different elements of topographic form.">
+
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="/groundhog/assets/main.css">
+
+    <link rel="canonical" href="/groundhog/documentation/terrain/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/groundhog/sitemap.xml" />
+    <meta name="robots" content="noindex"><!-- Block google indexing from Jekyll staging copy-->
+    
+    <script>
+    document.createElement( "picture" ); // Picture element HTML5 shiv
+    </script>
+
+  </head>
+
+  <body>
+
+    
+
+    
+  <nav class="navbar no-print" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-brand">
+
+      <a class="navbar-item" href="/groundhog">
+        <img src="/groundhog/assets/logo.svg" alt="Groundhog" id="logo">
+        Groundhog
+      </a>
+
+      <button class="button navbar-burger" data-target="navMenuDocumentation">
+        <span></span><span></span><span></span>
+      </button>
+
+  </div>
+
+    <div class="navbar-menu" id="navMenuDocumentation" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-start">
+
+        <a class="navbar-item gh-plugin-text " href="/groundhog/plugin/">
+          <i data-feather="package"></i> Plugin
+        </a>
+        <a class="navbar-item gh-documentation-text active" href="/groundhog/documentation/">
+          <i data-feather="book"></i> Docs
+        </a>
+        <a class="navbar-item gh-techniques-text " href="/groundhog/techniques/">
+          <i data-feather="briefcase"></i> Techniques
+        </a>
+        <a class="navbar-item gh-projects-text " href="/groundhog/projects/">
+          <i data-feather="aperture"></i> Projects
+        </a>
+        <a class="navbar-item gh-about-text " href="/groundhog/about/">
+          <i data-feather="help-circle"></i> About
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <a class="navbar-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+          <i class="is-light" data-feather="github"></i> Github
+        </a>
+        <a class="navbar-item" href="http://eepurl.com/c-0nNL" target="_blank">
+          <i data-feather="mail"></i> Newsletter
+        </a>
+        <!--
+        <a class="navbar-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+          <i class="is-light" data-feather="facebook"></i> <span class="is-hidden-desktop">Facebook</span>
+        </a>
+        <a class="navbar-item" href="https://twitter.com/groundhog_la" target="_blank">
+          <i class="is-light" data-feather="twitter"></i> <span class="is-hidden-desktop">Twitter</span>
+        </a>
+        -->
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+    <main class="content gh-documentation-content is-fluid footer-pushdown" aria-label="Content">
+      <section class="hero gh-documentation">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1">
+        Terrain
+      </h1>
+      <div class="level">
+        <div class="level-left">
+          
+          
+          
+        </div>
+      </div>
+      <h2 class="subtitle">
+        Components for quantifying different elements of topographic form.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    
+      
+
+<article class="message is-success no-print">
+  <div class="message-body">
+
+    <div class="columns">
+
+      <div class="column is-narrow gh-message-icon">
+        <i data-feather="download"></i>
+      </div>
+
+      <div class="column">
+        The associated model and definition that demonstrating the use of these components <a href="/groundhog/downloads/documentation/terrain.zip">can be downloaded here</a>. You will need to have installed the <a href="/groundhog/plugin/">Groundhog plugin</a> for the definition to work properly.
+      </div>
+
+    </div>
+
+  </div>
+</article>
+
+    
+
+    <p>Topography is heterogeneous in a more complex manner than contours or a 3D visualisation often suggest. Different and seemingly-similar areas of landform can posses quite distinct characteristics depending on relatively small variations in their grading and wider position within the landscape. 3D models in particular often make it difficult to determine or apprehend these characteristics of digital terrain models given the artificial manner in which they are rendered.</p>
+<p>Groundhog provides a number of components for measuring particular characteristics of a given landform. However its worth noting that, as above, such tools for classifying topographic features are only as good as their underpinning 3D representations. Representing landform as (say) either a <code>Mesh</code> or a <code>Surface</code> has different trade-offs in terms of the different types of accuracy and level of detailed offered.</p>
+<figure class="gh-figure">
+  
+<a href="/groundhog/assets/terrain/1-66d75e9277c1b2fffc6031eda371e182229e0b94e978a15ac1496284481f7bcd.png" target="_blank"> <img
+      srcset="/groundhog/assets/88dceb-83f1e9fd0ce2fd9b35a208311f93c32b4316428b89817d5cc28a18d6628d72f3.png 1080w,
+              /groundhog/assets/5352ce-c4d5aa5d4bf08159b75c9db4b444c701cd56659ef42a96c7cf5c2a9dadece352.png 1600w,
+              /groundhog/assets/442556-5690fc7dc3ca3b3fd124caf92a5e775132df01b7b83c0ab042e5de6347c7d079.png 2686w,"
+      sizes="(max-width: 768px) 100vw,
+             (max-width: 1024px) 96vw,
+             (max-width: 1408px) 92vw,
+             2600w"
+      src="/groundhog/assets/5352ce-c4d5aa5d4bf08159b75c9db4b444c701cd56659ef42a96c7cf5c2a9dadece352.png"
+      alt="Visualisations of slope analysis across a mesh, showing each face's grade as a vector, fill, and label" width="100%"
+    > </a>
+<figcaption>
+    <p>
+Visualisations of slope analysis across a mesh, showing each face's grade as a vector, fill, and label
+</p>
+    
+<em>Philip Belesky, for http://groundhog.la</em>
+</figcaption></figure>
+
+
+<p>The slope analysis component operates by identifying the normals of each face within the form and measuring those against the Z-axis to produce a measure of steepness that can be output as either an angle or percentile. This can then be filtered and visualised to assist in grading tasks that may need to ensure slopes stay within a particular range (say to ensure accessible circulation) or to highlight areas that are vulnerable to erosion or require stabilisation.</p>
+<div class="card gh-component">
+<div class="card-content">
+
+
+<div class="level is-mobile">
+
+<div class="level-left">
+
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium"><h3 class="title is-4">
+Mesh Slope
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Slope
+</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Terrain
+</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_mesh_slope.png" alt="Icon for the Slope component">
+</div>
+</div></div>
+
+</div>
+
+</div>
+
+
+<p>
+<em>Analyses the slope of a Mesh, outputting separated faces for coloring and the slope/grade</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Mesh
+</td>
+<td>
+<code>M</code>
+</td>
+<td>
+The terrain mesh
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>MeshParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Mesh Faces
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+The sub mesh faces (for coloring)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>MeshParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Centers
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+The centers of each mesh face (for vector previews)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Vectors
+</td>
+<td>
+<code>V</code>
+</td>
+<td>
+The direction to the lowest points of each face
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>VectorParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Slopes °
+</td>
+<td>
+<code>A</code>
+</td>
+<td>
+The slope of each mesh face, as the angle of inline
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Slopes %
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+The slope of each mesh face, as a percentage
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Slopes :
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+The slope of each mesh face, as the denominator of a ratio (i.e. 1:x)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<p>The aspect analysis component operates in a similar fashion but measures the faces' normals relative to a specified vector. This vector defaults to the Y-axis (assuming that is the North direction) and so produces a measure of which direction a slope faces. This can be used to identify areas within the landform that have a particular aspect, such as those that are predominantly north-easterly. This can be used to help determine the micro-climates of different areas of the landscape (based on their different levels of solar insolation) or to determine their visibility relative to a given vantage point.</p>
+<div class="card gh-component">
+<div class="card-content">
+<div class="level is-mobile">
+<div class="level-left">
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+<h3 class="title is-4">
+Mesh Aspect
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Aspect
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Terrain
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_mesh_aspect.png" alt="Icon for the Aspect component">
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>
+<em>Analyses the aspect of a Mesh, outputting separated faces for coloring and the aspect</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Mesh
+</td>
+<td>
+<code>M</code>
+</td>
+<td>
+The terrain mesh
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>MeshParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Aspect
+</td>
+<td>
+<code>A</code>
+</td>
+<td>
+Vector representing the direction to measure aspect against
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>VectorParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Mesh Faces
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+The sub mesh faces (for coloring)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>MeshParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Centers
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+The centers of each mesh face (for vector previews)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Aspects
+</td>
+<td>
+<code>A</code>
+</td>
+<td>
+The aspect of each mesh face (measured in degrees)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<p>Each component calculates the specified values but does not visualise them in the model itself. For visualisation purposes you will typically want to assign the range of slope or aspect values to a colour using the <code>Gradient</code> component then use a <code>Preview</code> component to apply these colours to each individual mesh face. The reference definition provided at the top of this page shows an example of this process and several other visualisation options.</p>
+<p>Components are provided (as a convenience) for employing the same analytics on a <code>Surface</code> rather than a <code>Mesh</code> although note that the former will be converted to the latter during the calculation.</p>
+<div class="card gh-component">
+<div class="card-content">
+<div class="level is-mobile">
+<div class="level-left">
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+<h3 class="title is-4">
+Surface Slope
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Slope
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Terrain
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_surface_slope.png" alt="Icon for the Slope component">
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>
+<em>Analyses the slope of a Surface, outputting separated faces for coloring and the slope/grade</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Surface
+</td>
+<td>
+<code>S</code>
+</td>
+<td>
+The terrain surface
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>SurfaceParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Mesh Faces
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+The sub mesh faces (for coloring)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>MeshParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Centers
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+The centers of each mesh face (for vector previews)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Vectors
+</td>
+<td>
+<code>V</code>
+</td>
+<td>
+The direction to the lowest points of each face
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>VectorParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Slopes °
+</td>
+<td>
+<code>A</code>
+</td>
+<td>
+The slope of each mesh face, as the angle of inline
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Slopes %
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+The slope of each mesh face, as a percentage
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Slopes :
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+The slope of each mesh face, as the denominator of a ratio (i.e. 1:x)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<div class="card gh-component">
+<div class="card-content">
+
+
+<div class="level is-mobile">
+
+<div class="level-left">
+
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium"><h3 class="title is-4">
+Surface Aspect
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Aspect
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Terrain
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_surface_aspect.png" alt="Icon for the Aspect component">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<p>
+<em>Analyses the aspect of a Surface, outputting separated faces for coloring and the aspect</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Surface
+</td>
+<td>
+<code>S</code>
+</td>
+<td>
+The terrain surface
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>SurfaceParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Aspect
+</td>
+<td>
+<code>A</code>
+</td>
+<td>
+Vector representing the direction to measure aspect against
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>VectorParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Mesh Faces
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+The sub mesh faces (for coloring)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>MeshParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Centers
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+The centers of each mesh face (for vector previews)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Face Aspects
+</td>
+<td>
+<code>A</code>
+</td>
+<td>
+The aspect of each mesh face (measured in degrees)
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<blockquote>
+<p><em><strong>Coming Soon</strong>: further components that provide other metrics for assessing different terrain characteristics.</em></p>
+</blockquote>
+<div class="references">
+
+</div>
+
+
+  </div>
+</section>
+
+<!--
+<section class="section">
+  <div class="container">
+
+    
+      <h4>Related Techniques</h4>
+      
+        
+      
+        
+      
+    
+
+    
+
+    
+      <h4>Related Projects</h4>
+      
+        
+      
+        
+      
+        
+      
+    
+
+  </div>
+</section>
+ -->
+    </main>
+
+    <footer class="footer no-print">
+  <div class="container content gh-documentation-content has-text-centered">
+
+    <nav class="level">
+      <a class="level-item" href="/groundhog/about/">
+        <i data-feather="help-circle"></i> About
+      </a>
+      <a class="level-item" href="/groundhog/plugin/">
+        <i data-feather="package"></i> Plugin
+      </a>
+      <a class="level-item" href="/groundhog/documentation/">
+        <i data-feather="book"></i> Docs
+      </a>
+      <a class="level-item" href="/groundhog/techniques/">
+        <i data-feather="briefcase"></i> Techniques
+      </a>
+      <a class="level-item" href="/groundhog/projects/">
+        <i data-feather="aperture"></i> Projects
+      </a>
+      <a class="level-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+        <i data-feather="github"></i> Github
+      </a>
+      <!--
+      <a class="level-item" href="" target="_blank">
+        <i data-feather="download-cloud"></i> Food4Rhino
+      </a>
+      -->
+      <a class="level-item" href="http://eepurl.com/c-0nNL" target="_blank">
+        <i data-feather="mail"></i> Newsletter
+      </a>
+      <!--
+      <a class="level-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+        <i data-feather="facebook"></i> Facebook
+      </a>
+      <a class="level-item" href="https://twitter.com/groundhog_la" target="_blank">
+        <i data-feather="twitter"></i> Twitter
+      </a>
+      -->
+    </nav>
+
+    <p class="">
+      <em>The Groundhog plugin and website are © 2018 under the terms of the <a href="https://opensource.org/licenses/GPL-3.0">GPL v3 License</a>. By <a href="http://philipbelesky.com/" target="_blank">Philip Belesky</a>.</em>
+    </p>
+
+  </div>
+</footer>
+
+  </body>
+
+  <script src="/groundhog/assets/main.js"></script>
+
+</html>

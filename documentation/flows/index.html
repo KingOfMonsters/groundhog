@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Groundhog - Flows</title>
+    <meta name="description" content="Components for creating simple projections and analysis of surface water flows.">
+
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="/groundhog/assets/main.css">
+
+    <link rel="canonical" href="/groundhog/documentation/flows/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/groundhog/sitemap.xml" />
+    <meta name="robots" content="noindex"><!-- Block google indexing from Jekyll staging copy-->
+    
+    <script>
+    document.createElement( "picture" ); // Picture element HTML5 shiv
+    </script>
+
+  </head>
+
+  <body>
+
+    
+
+    
+  <nav class="navbar no-print" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-brand">
+
+      <a class="navbar-item" href="/groundhog">
+        <img src="/groundhog/assets/logo.svg" alt="Groundhog" id="logo">
+        Groundhog
+      </a>
+
+      <button class="button navbar-burger" data-target="navMenuDocumentation">
+        <span></span><span></span><span></span>
+      </button>
+
+  </div>
+
+    <div class="navbar-menu" id="navMenuDocumentation" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-start">
+
+        <a class="navbar-item gh-plugin-text " href="/groundhog/plugin/">
+          <i data-feather="package"></i> Plugin
+        </a>
+        <a class="navbar-item gh-documentation-text active" href="/groundhog/documentation/">
+          <i data-feather="book"></i> Docs
+        </a>
+        <a class="navbar-item gh-techniques-text " href="/groundhog/techniques/">
+          <i data-feather="briefcase"></i> Techniques
+        </a>
+        <a class="navbar-item gh-projects-text " href="/groundhog/projects/">
+          <i data-feather="aperture"></i> Projects
+        </a>
+        <a class="navbar-item gh-about-text " href="/groundhog/about/">
+          <i data-feather="help-circle"></i> About
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <a class="navbar-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+          <i class="is-light" data-feather="github"></i> Github
+        </a>
+        <a class="navbar-item" href="http://eepurl.com/c-0nNL" target="_blank">
+          <i data-feather="mail"></i> Newsletter
+        </a>
+        <!--
+        <a class="navbar-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+          <i class="is-light" data-feather="facebook"></i> <span class="is-hidden-desktop">Facebook</span>
+        </a>
+        <a class="navbar-item" href="https://twitter.com/groundhog_la" target="_blank">
+          <i class="is-light" data-feather="twitter"></i> <span class="is-hidden-desktop">Twitter</span>
+        </a>
+        -->
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+    <main class="content gh-documentation-content is-fluid footer-pushdown" aria-label="Content">
+      <section class="hero gh-documentation">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1">
+        Flows
+      </h1>
+      <div class="level">
+        <div class="level-left">
+          
+          
+          
+        </div>
+      </div>
+      <h2 class="subtitle">
+        Components for creating simple projections and analysis of surface water flows.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    
+      
+
+<article class="message is-success no-print">
+  <div class="message-body">
+
+    <div class="columns">
+
+      <div class="column is-narrow gh-message-icon">
+        <i data-feather="download"></i>
+      </div>
+
+      <div class="column">
+        The associated model and definition that demonstrating the use of these components <a href="/groundhog/downloads/documentation/flows.zip">can be downloaded here</a>. You will need to have installed the <a href="/groundhog/plugin/">Groundhog plugin</a> for the definition to work properly.
+      </div>
+
+    </div>
+
+  </div>
+</article>
+
+    
+
+    <figure class="gh-figure">
+  
+<a href="/groundhog/assets/flows/1-8633f0e167ae603ed42ebe2508c4d46012d4471b43398bf668f7346638115875.jpg" target="_blank"> <img
+      srcset="/groundhog/assets/bd1bc8-08ef2270badd3560c27400104e47b1a367801c0bafbaf1957341b3817c5c69f0.jpg 1080w,
+              /groundhog/assets/eb95ad-8b3a03964cc6776921224ddb4ae31e5217d44fd27e0f4860ae770cbae591c7e9.jpg 1600w,
+              /groundhog/assets/afe39f-525dad17aa2dafe082333b1510db425ed2a310a434a153b01cfd6c3d892aaec0.jpg 2686w,"
+      sizes="(max-width: 768px) 100vw,
+             (max-width: 1024px) 96vw,
+             (max-width: 1408px) 92vw,
+             2600w"
+      src="/groundhog/assets/eb95ad-8b3a03964cc6776921224ddb4ae31e5217d44fd27e0f4860ae770cbae591c7e9.jpg"
+      alt="Surface water flow paths across a littoral region" width="100%"
+    > </a>
+<figcaption>
+    <p>
+Surface water flow paths across a littoral region
+</p>
+    
+<em>Image via Philip Belesky for the &quot;Processes and Processors&quot; project (http://philipbelesky.com/projects/processes-and-processors/)</em>
+</figcaption></figure>
+
+
+<p>The &quot;flows&quot; components create naïve projections or simulation of surface water flows and provide further means to analyse the results of this calculation. The key component — the <code>FlowPath</code> accepts a series of 'drop points' on a <code>Surface</code> or <code>Mesh</code> that become the starting locations of each hypothetical flow path. From there, each point samples the surface or mesh to determine its slope, which becomes a directing vector (i.e. one that points 'downhill'). Each point is then moved along this vector a pre-specified distance, forming a line. The end of this line part then becomes the starting point for the next direction; creating a recursive process where flow paths assemble themselves as <code>Polylines</code> that grow through this series of descending jumps.</p>
+<p>This 'gradient descent' process repeats until a path crosses the edge of the form, after a specified quantity of iterations, or until the algorithm determines that the path has reached a point without a viable further downhill path. This halting calculation aims to identify 'basin' where water might collect and pool rather than continue to flow downhill. The component then produces as an output a series of <code>Polylines</code>, from which the beginnings, ends, and individual segments can be readily extracted. The process provides degrees of flexibility. By accepting any given set of <code>Points</code> (rather than enforcing a spatial grid or other formation) it offers the ability to work across a number of contexts, from situations where you may want to simulate a uniform distribution (say rain) or just a particular point-source of water.</p>
+<p>The <code>FlowPath</code> component takes two forms a <code>SurfaceFlowPath</code> and a <code>MeshFlowPath</code> depending on the geometric type of the 'landscape' you want to test.</p>
+<div class="card gh-component">
+<div class="card-content">
+<div class="level is-mobile">
+<div class="level-left">
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+<h3 class="title is-4">
+Flow Projection (Surface)
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Srf Flows
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Hydro
+</div>
+</div>
+</div>
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_flows_srf.png" alt="Icon for the Srf Flows component">
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>
+<em>Construct flow paths over a surface</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Surface
+</td>
+<td>
+<code>S</code>
+</td>
+<td>
+Base landscape form (as a surface) for the flow calculation
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>SurfaceParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Points
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+Start points for the flow paths. These should be above the surface (they will be projected on to it)
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Fidelity
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+Amount to move for each flow iteration. Small numbers may take a long time to compute. If not specified or set to 0 a (hopefully) sensible step size will be calculated.
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Steps
+</td>
+<td>
+<code>L</code>
+</td>
+<td>
+A limit to the number of flow iterations. Leave unset or to 0 for an unlimited set of iterations
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>IntegerParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Thread
+</td>
+<td>
+<code>T</code>
+</td>
+<td>
+Whether to multithread the solution (this can speed up long calculations)
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>BooleanParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Flow Points
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+The points of each simulated flow path 'jump'
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Flow Paths
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+A polyline linking each of the flow points into a path
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CurveParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<div class="card gh-component">
+<div class="card-content">
+
+
+<div class="level is-mobile">
+
+<div class="level-left">
+
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium"><h3 class="title is-4">
+Flow Projection (Mesh)
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Mesh Flows
+</div>
+</div>
+</div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Hydro
+</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_flows_mesh.png" alt="Icon for the Mesh Flows component">
+</div>
+</div></div>
+
+</div>
+
+</div>
+
+
+<p>
+<em>Construct flow paths over a mesh</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Mesh
+</td>
+<td>
+<code>M</code>
+</td>
+<td>
+Base landscape form (as a mesh) for the flow calculation
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>MeshParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Points
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+Start points for the flow paths. These should be above the mesh (they will be projected on to it)
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Fidelity
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+Amount to move for each flow iteration. Small numbers may take a long time to compute. If not specified or set to 0 a (hopefully) sensible step size will be calculated.
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Steps
+</td>
+<td>
+<code>L</code>
+</td>
+<td>
+A limit to the number of flow iterations. Leave unset or to 0 for an unlimited set of iterations
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>IntegerParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Thread
+</td>
+<td>
+<code>T</code>
+</td>
+<td>
+Whether to multithread the solution (this can speed up long calculations)
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>BooleanParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Flow Points
+</td>
+<td>
+<code>F</code>
+</td>
+<td>
+The points of each simulated flow path 'jump'
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>PointParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Flow Paths
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+A polyline linking each of the flow points into a path
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CurveParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+<p>Once calculated, these flow paths can then be used to support further analysis of the landscape's hydrological features.</p>
+<p>The first component for this is <code>FlowCatchment</code>. It uses the collection of flow paths (knowing their end points) to identify different catchment areas. That is to say, it classifies each flow path into groups depending upon which paths finish or 'drain' into the same approximate location. This grouping is visually represented using a Voronoi diagram with each cell centred on the original <code>Pts</code> used as the 'start' of each path (adjacent cells of the same group will be merged). Additionally, the different catchment groups are provided with a distinct colour code and its cells/paths are output as distinct branches so they can be visualised or analysed further.</p>
+<div class="card gh-component">
+<div class="card-content">
+
+
+<div class="level is-mobile">
+
+<div class="level-left">
+
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium"><h3 class="title is-4">
+Flow Catchments
+</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Nickname
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Catchments
+</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Panel
+</div>
+<div class="tag is-medium has-text-weight-bold">
+Hydro
+</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">
+Icon
+</div>
+<div class="tag is-medium">
+<img src="/groundhog/assets/plugin/icons/icon_flows_catchments.png" alt="Icon for the Catchments component">
+</div>
+</div></div>
+
+</div>
+
+</div>
+
+
+<p>
+<em>Identify the catchments within a set of flow paths</em>
+</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Mode
+</th>
+<th>
+Name
+</th>
+<th>
+ID
+</th>
+<th>
+Description
+</th>
+<th>
+Optional
+</th>
+<th>
+Type
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Flow Paths
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+The flow paths as generated by the flows component
+</td>
+<td>
+<i data-feather="x"></i>
+</td>
+<td class="no-wrap">
+<code>CurveParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-in"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Proximty Threshold
+</td>
+<td>
+<code>T</code>
+</td>
+<td>
+The distance between end points required to form a catchment
+</td>
+<td>
+<i data-feather="check"></i>
+</td>
+<td class="no-wrap">
+<code>NumberParameter</code>
+</td>
+</tr>
+
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Catchments
+</td>
+<td>
+<code>B</code>
+</td>
+<td>
+The catchment boundaries identified
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CurveParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Flow Paths
+</td>
+<td>
+<code>P</code>
+</td>
+<td>
+The flow paths grouped by catchment
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>CurveParameter</code>
+</td>
+</tr>
+
+<tr>
+<td class="no-wrap">
+<i data-feather="log-out"></i><strong></strong>
+</td>
+<td class="no-wrap">
+Color Codes
+</td>
+<td>
+<code>C</code>
+</td>
+<td>
+Colour codes the uniquely identify each path and boundary
+</td>
+<td>
+<i data-feather="minus"></i>
+</td>
+<td class="no-wrap">
+<code>ColourParameter</code>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+
+<figure class="gh-figure">
+  
+<a href="/groundhog/assets/flows/model-4516fe672b0be7ca6b123674b934b0388855f65be1276a255b2f9245a54f52f6.jpg" target="_blank"> <img
+      srcset="/groundhog/assets/b3e3d4-b67503073d765725fd7b21224297e8c9c1f8a241ca50b9cbc1c37c202ede8418.jpg 1080w,
+              /groundhog/assets/077258-a12556a3cc576ad3ab0ad9531a2f951904f1a57aa9f00c4932033e7beaa7f8df.jpg 1600w,
+              /groundhog/assets/0fd542-0e7a24f164553ae5ca3b719c41dc9032011700e1a89b150ed7b3586220f292e4.jpg 2686w,"
+      sizes="(max-width: 768px) 100vw,
+             (max-width: 1024px) 96vw,
+             (max-width: 1408px) 92vw,
+             2600w"
+      src="/groundhog/assets/077258-a12556a3cc576ad3ab0ad9531a2f951904f1a57aa9f00c4932033e7beaa7f8df.jpg"
+      alt="Image of the flows component used across two hypothetical landforms" width="100%"
+    > </a>
+</figure>
+
+
+
+<figure class="gh-figure">
+  
+<a href="/groundhog/assets/flows/definition-bc56c69b569d7c5a02c4dc9f8eddc36ccd07d97483e72f8ed3c52d45ab0792ad.jpg" target="_blank"> <img
+      srcset="/groundhog/assets/0a74b1-e92c1217dd290dde5e7ad5ccc4bcfea64cc1b81060b8e4cefbb45e01a608d874.jpg 1080w,
+              /groundhog/assets/c5f9e1-93561a2d326121b839c3143fce2bc851e26b534c50bd1ce793caf036507050de.jpg 1600w,
+              /groundhog/assets/b45c8c-8e7beafcf4cf53e3358b417f4c1fb5b574ff3f7b446b44fe5380eb05bf660f6e.jpg 2686w,"
+      sizes="(max-width: 768px) 100vw,
+             (max-width: 1024px) 96vw,
+             (max-width: 1408px) 92vw,
+             2600w"
+      src="/groundhog/assets/c5f9e1-93561a2d326121b839c3143fce2bc851e26b534c50bd1ce793caf036507050de.jpg"
+      alt="Grasshopper definition demonstrating how to use the flow and catchment analysis for Surface and Mesh form." width="100%"
+    > </a>
+<figcaption>
+    <p>
+Grasshopper definition demonstrating how to use the flow and catchment analysis for Surface and Mesh form.
+</p>
+    
+<em>Philip Belesky, for http://groundhog.la</em>
+</figcaption></figure>
+
+
+
+<div class="references">
+
+</div>
+
+
+  </div>
+</section>
+
+<!--
+<section class="section">
+  <div class="container">
+
+    
+      <h4>Related Techniques</h4>
+      
+        
+      
+        
+      
+    
+
+    
+
+    
+      <h4>Related Projects</h4>
+      
+        
+      
+        
+      
+        
+      
+    
+
+  </div>
+</section>
+ -->
+    </main>
+
+    <footer class="footer no-print">
+  <div class="container content gh-documentation-content has-text-centered">
+
+    <nav class="level">
+      <a class="level-item" href="/groundhog/about/">
+        <i data-feather="help-circle"></i> About
+      </a>
+      <a class="level-item" href="/groundhog/plugin/">
+        <i data-feather="package"></i> Plugin
+      </a>
+      <a class="level-item" href="/groundhog/documentation/">
+        <i data-feather="book"></i> Docs
+      </a>
+      <a class="level-item" href="/groundhog/techniques/">
+        <i data-feather="briefcase"></i> Techniques
+      </a>
+      <a class="level-item" href="/groundhog/projects/">
+        <i data-feather="aperture"></i> Projects
+      </a>
+      <a class="level-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+        <i data-feather="github"></i> Github
+      </a>
+      <!--
+      <a class="level-item" href="" target="_blank">
+        <i data-feather="download-cloud"></i> Food4Rhino
+      </a>
+      -->
+      <a class="level-item" href="http://eepurl.com/c-0nNL" target="_blank">
+        <i data-feather="mail"></i> Newsletter
+      </a>
+      <!--
+      <a class="level-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+        <i data-feather="facebook"></i> Facebook
+      </a>
+      <a class="level-item" href="https://twitter.com/groundhog_la" target="_blank">
+        <i data-feather="twitter"></i> Twitter
+      </a>
+      -->
+    </nav>
+
+    <p class="">
+      <em>The Groundhog plugin and website are © 2018 under the terms of the <a href="https://opensource.org/licenses/GPL-3.0">GPL v3 License</a>. By <a href="http://philipbelesky.com/" target="_blank">Philip Belesky</a>.</em>
+    </p>
+
+  </div>
+</footer>
+
+  </body>
+
+  <script src="/groundhog/assets/main.js"></script>
+
+</html>

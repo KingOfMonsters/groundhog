@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Groundhog - Paths</title>
+    <meta name="description" content="Components for ...">
+
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/groundhog/assets/logo-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="/groundhog/assets/main.css">
+
+    <link rel="canonical" href="/groundhog/documentation/paths/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/groundhog/sitemap.xml" />
+    <meta name="robots" content="noindex"><!-- Block google indexing from Jekyll staging copy-->
+    
+    <script>
+    document.createElement( "picture" ); // Picture element HTML5 shiv
+    </script>
+
+  </head>
+
+  <body>
+
+    
+
+    
+  <nav class="navbar no-print" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-brand">
+
+      <a class="navbar-item" href="/groundhog">
+        <img src="/groundhog/assets/logo.svg" alt="Groundhog" id="logo">
+        Groundhog
+      </a>
+
+      <button class="button navbar-burger" data-target="navMenuDocumentation">
+        <span></span><span></span><span></span>
+      </button>
+
+  </div>
+
+    <div class="navbar-menu" id="navMenuDocumentation" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-start">
+
+        <a class="navbar-item gh-plugin-text " href="/groundhog/plugin/">
+          <i data-feather="package"></i> Plugin
+        </a>
+        <a class="navbar-item gh-documentation-text active" href="/groundhog/documentation/">
+          <i data-feather="book"></i> Docs
+        </a>
+        <a class="navbar-item gh-techniques-text " href="/groundhog/techniques/">
+          <i data-feather="briefcase"></i> Techniques
+        </a>
+        <a class="navbar-item gh-projects-text " href="/groundhog/projects/">
+          <i data-feather="aperture"></i> Projects
+        </a>
+        <a class="navbar-item gh-about-text " href="/groundhog/about/">
+          <i data-feather="help-circle"></i> About
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <a class="navbar-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+          <i class="is-light" data-feather="github"></i> Github
+        </a>
+        <a class="navbar-item" href="http://eepurl.com/c-0nNL" target="_blank">
+          <i data-feather="mail"></i> Newsletter
+        </a>
+        <!--
+        <a class="navbar-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+          <i class="is-light" data-feather="facebook"></i> <span class="is-hidden-desktop">Facebook</span>
+        </a>
+        <a class="navbar-item" href="https://twitter.com/groundhog_la" target="_blank">
+          <i class="is-light" data-feather="twitter"></i> <span class="is-hidden-desktop">Twitter</span>
+        </a>
+        -->
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+    <main class="content gh-documentation-content is-fluid footer-pushdown" aria-label="Content">
+      <section class="hero gh-documentation">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1">
+        Paths
+      </h1>
+      <div class="level">
+        <div class="level-left">
+          
+          
+          
+        </div>
+      </div>
+      <h2 class="subtitle">
+        Components for ...
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    
+      
+
+<article class="message is-success no-print">
+  <div class="message-body">
+
+    <div class="columns">
+
+      <div class="column is-narrow gh-message-icon">
+        <i data-feather="download"></i>
+      </div>
+
+      <div class="column">
+        The associated model and definition that demonstrating the use of these components <a href="/groundhog/downloads/documentation/paths.zip">can be downloaded here</a>. You will need to have installed the <a href="/groundhog/plugin/">Groundhog plugin</a> for the definition to work properly.
+      </div>
+
+    </div>
+
+  </div>
+</article>
+
+    
+
+    <ul>
+<li>Introduction to general hydraulic principles</li>
+<li>Describe process for deriving level from flow quantity; noting not that water does not strictly follow this process (i.e. settling effects)</li>
+</ul>
+<!-- 
+<div class="card gh-component">
+<div class="card-content">
+
+
+<div class="level is-mobile">
+
+<div class="level-left">
+
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium"><h3 class="title is-4">Shortest Path</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">Nickname</div>
+<div class="tag is-medium has-text-weight-bold">ShortPath</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">Panel</div>
+<div class="tag is-medium has-text-weight-bold">Mapping</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">Icon</div>
+<div class="tag is-medium"><img src="/groundhog/assets/plugin/icons/icon_shortest_path.png" alt="Icon for the ShortPath component"></div>
+</div></div>
+
+</div>
+
+</div>
+
+
+<p><em>Calculates the shortest path in a network of curves</em></p>
+
+<table class="table">
+<thead>
+<tr>
+<th>Mode</th>
+<th>Name</th>
+<th>ID</th>
+<th>Description</th>
+<th>Optional</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Curves</td>
+<td><code>C</code></td>
+<td>The group of curves that form the network to traverse</td>
+<td><i data-feather="x"></i></td>
+<td class="no-wrap"><code>CurveParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Starts</td>
+<td><code>S</code></td>
+<td>The point or points that form the starting point of the path</td>
+<td><i data-feather="x"></i></td>
+<td class="no-wrap"><code>PointParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Ends</td>
+<td><code>E</code></td>
+<td>The point or points that form the end point of the path</td>
+<td><i data-feather="x"></i></td>
+<td class="no-wrap"><code>PointParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Lengths</td>
+<td><code>L</code></td>
+<td>A manually-specified length for each curve; useful if you want to artificially </td>
+<td><i data-feather="check"></i></td>
+<td class="no-wrap"><code>NumberParameter</code></td>
+</tr>
+
+
+<tr>
+<td class="no-wrap"><i data-feather="log-out"></i><strong></strong></td>
+<td class="no-wrap">Shortest Path</td>
+<td><code>P</code></td>
+<td>The curve showing the shortest connection</td>
+<td><i data-feather="minus"></i></td>
+<td class="no-wrap"><code>CurveParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-out"></i><strong></strong></td>
+<td class="no-wrap">Succession</td>
+<td><code>S</code></td>
+<td>The indices of the curves that form the shortest path</td>
+<td><i data-feather="minus"></i></td>
+<td class="no-wrap"><code>IntegerParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-out"></i><strong></strong></td>
+<td class="no-wrap">Direction</td>
+<td><code>D</code></td>
+<td>True if the curve in succession is walked from start to end, false otherwise</td>
+<td><i data-feather="minus"></i></td>
+<td class="no-wrap"><code>BooleanParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-out"></i><strong></strong></td>
+<td class="no-wrap">Length</td>
+<td><code>L</code></td>
+<td>The total length, as an aggregation of the input lengths measured along the path</td>
+<td><i data-feather="minus"></i></td>
+<td class="no-wrap"><code>NumberParameter</code></td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+ -->
+
+<ul>
+<li>Description of topology / shortest path algorithm</li>
+</ul>
+<!-- 
+<div class="card gh-component">
+<div class="card-content">
+
+
+<div class="level is-mobile">
+
+<div class="level-left">
+
+<div class="level-item">
+<div class="tags has-addons">
+<div class="tag is-medium"><h3 class="title is-4">Random Path</h3></div>
+</div>
+</div>
+
+</div>
+
+<div class="level-right">
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">Nickname</div>
+<div class="tag is-medium has-text-weight-bold">RandPath</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">Panel</div>
+<div class="tag is-medium has-text-weight-bold">Mapping</div>
+</div></div>
+
+<div class="level-item"><div class="tags has-addons">
+<div class="tag is-medium">Icon</div>
+<div class="tag is-medium"><img src="/groundhog/assets/plugin/icons/icon_random_path.png" alt="Icon for the RandPath component"></div>
+</div></div>
+
+</div>
+
+</div>
+
+
+<p><em>Calculates a random path (in 2 dimensions)</em></p>
+
+<table class="table">
+<thead>
+<tr>
+<th>Mode</th>
+<th>Name</th>
+<th>ID</th>
+<th>Description</th>
+<th>Optional</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Start</td>
+<td><code>P</code></td>
+<td>The initial starting point or points for the path(s)</td>
+<td><i data-feather="x"></i></td>
+<td class="no-wrap"><code>PointParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Step Size</td>
+<td><code>L</code></td>
+<td>The distance to move forward for each step. If provided as a list a random option will be selected for each step.</td>
+<td><i data-feather="x"></i></td>
+<td class="no-wrap"><code>NumberParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Step Count</td>
+<td><code>C</code></td>
+<td>The number of steps to take.</td>
+<td><i data-feather="x"></i></td>
+<td class="no-wrap"><code>IntegerParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Random Seed</td>
+<td><code>S</code></td>
+<td>The random seed to be used for each of the path distance and angle choices. If set the same random results will be produced; if not set they will be different for each run.</td>
+<td><i data-feather="check"></i></td>
+<td class="no-wrap"><code>IntegerParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Directions</td>
+<td><code>D</code></td>
+<td>The possible angles in which to move (as a list of numbers in degrees). If not set a random direction in a 360 degree range will be used.</td>
+<td><i data-feather="check"></i></td>
+<td class="no-wrap"><code>NumberParameter</code></td>
+</tr>
+
+<tr>
+<td class="no-wrap"><i data-feather="log-in"></i><strong></strong></td>
+<td class="no-wrap">Boundary</td>
+<td><code>B</code></td>
+<td>A boundary (must be a closed planar curve) that the steps will not be allowed to cross</td>
+<td><i data-feather="check"></i></td>
+<td class="no-wrap"><code>CurveParameter</code></td>
+</tr>
+
+
+<tr>
+<td class="no-wrap"><i data-feather="log-out"></i><strong></strong></td>
+<td class="no-wrap">Path</td>
+<td><code>P</code></td>
+<td>The resulting random path</td>
+<td><i data-feather="minus"></i></td>
+<td class="no-wrap"><code>CurveParameter</code></td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+ -->
+
+<ul>
+<li>Description of random path component</li>
+<li>Note link to ecologist's behavioural models</li>
+<li>Discussion of uses within design process
+<ul>
+<li>Understanding connectivity across a landscape/city etc</li>
+<li>Understanding more abstracted 'connections' — i.e. river systems</li>
+<li>Random path as useful for things like seed scattering etc</li>
+</ul></li>
+</ul>
+<div class="references">
+
+</div>
+
+
+  </div>
+</section>
+
+<!--
+<section class="section">
+  <div class="container">
+
+    
+      <h4>Related Techniques</h4>
+      
+        
+      
+        
+      
+    
+
+    
+
+    
+      <h4>Related Projects</h4>
+      
+        
+      
+        
+      
+        
+      
+    
+
+  </div>
+</section>
+ -->
+    </main>
+
+    <footer class="footer no-print">
+  <div class="container content gh-documentation-content has-text-centered">
+
+    <nav class="level">
+      <a class="level-item" href="/groundhog/about/">
+        <i data-feather="help-circle"></i> About
+      </a>
+      <a class="level-item" href="/groundhog/plugin/">
+        <i data-feather="package"></i> Plugin
+      </a>
+      <a class="level-item" href="/groundhog/documentation/">
+        <i data-feather="book"></i> Docs
+      </a>
+      <a class="level-item" href="/groundhog/techniques/">
+        <i data-feather="briefcase"></i> Techniques
+      </a>
+      <a class="level-item" href="/groundhog/projects/">
+        <i data-feather="aperture"></i> Projects
+      </a>
+      <a class="level-item" href="https://github.com/philipbelesky/groundhog" target="_blank">
+        <i data-feather="github"></i> Github
+      </a>
+      <!--
+      <a class="level-item" href="" target="_blank">
+        <i data-feather="download-cloud"></i> Food4Rhino
+      </a>
+      -->
+      <a class="level-item" href="http://eepurl.com/c-0nNL" target="_blank">
+        <i data-feather="mail"></i> Newsletter
+      </a>
+      <!--
+      <a class="level-item" href="https://www.facebook.com/groundhog.la/" target="_blank">
+        <i data-feather="facebook"></i> Facebook
+      </a>
+      <a class="level-item" href="https://twitter.com/groundhog_la" target="_blank">
+        <i data-feather="twitter"></i> Twitter
+      </a>
+      -->
+    </nav>
+
+    <p class="">
+      <em>The Groundhog plugin and website are © 2018 under the terms of the <a href="https://opensource.org/licenses/GPL-3.0">GPL v3 License</a>. By <a href="http://philipbelesky.com/" target="_blank">Philip Belesky</a>.</em>
+    </p>
+
+  </div>
+</footer>
+
+  </body>
+
+  <script src="/groundhog/assets/main.js"></script>
+
+</html>
